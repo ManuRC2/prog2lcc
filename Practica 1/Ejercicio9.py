@@ -10,7 +10,6 @@ def safe_number_input(text = "Ingrese un número: "):
             print("Por favor, ingrese un número natural.")
     return(x)
 
-
 def sum(x, y):
     return x + y
 def res(x, y):
@@ -50,9 +49,5 @@ def menu():
             print("El numero ingresado no es válido.")
     menu()
         
-
-
-
-
 if __name__ == '__main__':
     menu()
