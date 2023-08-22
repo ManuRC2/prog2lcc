@@ -1,5 +1,5 @@
 def es_potencia_de_dos(n):
-    if n == 2:
+    if n == 2 or n == 1:
         return True
     if n % 2 != 0:
         return False
@@ -13,4 +13,4 @@ def potencias_de_dos(n, m):
     return res
 
 if __name__ == '__main__':
-    print(potencias_de_dos(3, 4545))
+    print(potencias_de_dos(1, 4545))
