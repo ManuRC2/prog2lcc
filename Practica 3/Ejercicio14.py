@@ -6,10 +6,10 @@ from math import trunc
 # Max minutos = 60
 
 def arreglarTiempo(tiempo: tuple[int, int]):
-    return ((tiempo[0]%24)+trunc(tiempo[1]/60), tiempo[1]%60)
+    return ((tiempo[0]+trunc(tiempo[1]/60))%24, tiempo[1]%60)
 
 def sumaTiempo(t1: tuple[int, int], t2: tuple[int, int]):
     return arreglarTiempo((t1[0]+t2[0], t1[1]+t2[1]))
 
 if __name__ == "__main__":
-    print(sumaTiempo((16, 45), (8, 60)))
+    print(sumaTiempo((16, 45), (8, 1440)))
