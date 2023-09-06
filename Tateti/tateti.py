@@ -57,21 +57,22 @@ def alguien_gano(tab):
                 estado = cas
     return estado
 
-tablero = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+if __name__ == '__main__':
+    tablero = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
-victoria = 0
-jugador = 1
+    victoria = 0
+    jugador = 1
 
-while victoria == 0:
-    tablero = poner_ficha(tablero, jugador)
-    mostrar_tablero(tablero)
-    victoria = alguien_gano(tablero)
-    jugador = 1 if jugador == 2 else 2
+    while victoria == 0:
+        tablero = poner_ficha(tablero, jugador)
+        mostrar_tablero(tablero)
+        victoria = alguien_gano(tablero)
+        jugador = 1 if jugador == 2 else 2
 
-match victoria:
-    case 1:
-        print("Gana el jugador 1!")
-    case 2:
-        print("Gana el jugador 2!")
-    case True:
-        print("Empate!")
+    match victoria:
+        case 1:
+            print("Gana el jugador 1!")
+        case 2:
+            print("Gana el jugador 2!")
+        case True:
+            print("Empate!")
